@@ -1,27 +1,53 @@
-# React + TypeScript + Vite
+# Encrypted Instructions Decoder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements a decryption system developed with React and TypeScript to help agents decode encrypted instructions embedded within messages. With a user-friendly interface and optimized code, this tool serves as a valuable resource for professionals in the field of security and cryptography.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Decode encrypted instructions from given messages.
+- Supports messages with repeated characters due to transmission errors.
+- User-friendly interface for easy decryption and instruction identification.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js
+- npm or Yarn
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/jcvb//Encrypted-Instructions.git
+cd encrypted-instructions-decoder
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Install the dependencies:
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+Start the development server:
+```bash
+npm start
+```
+
+or 
+
+```bash
+yarn start
+```
+
+## Usage
+TODO
+
+
+
+
