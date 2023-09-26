@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 coverage/*.*
+coverage/src/*.*
 .coverage
 .testrepository/
 cover/
