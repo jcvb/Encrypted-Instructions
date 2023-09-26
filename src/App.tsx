@@ -1,12 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
-import { Button } from './components/ui/button';
-
+import FileReader from './components/FileReader';
 function App() {
   return (
     <div>
-      <h1>Vite + React</h1>
-      <Button>Click me</Button>
+      <FileReader />
     </div>
   );
 }
