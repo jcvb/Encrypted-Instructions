@@ -14,6 +14,7 @@ module.exports = {
     {
       env: {
         node: true,
+        jest: true,
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
@@ -27,6 +28,6 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'jest'],
   rules: {},
 };
