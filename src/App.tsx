@@ -1,8 +1,15 @@
+import React from 'react';
 import './App.css';
+import { Button } from './components/ui/button';
 
 function App() {
-  // eslint-disable-next-line react/react-in-jsx-scope
-  return <h1>Vite + React</h1>;
+  return (
+
+    <div>
+      <h1>Vite + React</h1>
+      <Button>Click me</Button>
+    </div>
+  );
 }
 
 export default App;
