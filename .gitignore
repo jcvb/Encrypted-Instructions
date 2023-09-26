@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+coverage/*
+coverage*
 coverage/*.*
 coverage/src/*.*
 .coverage
