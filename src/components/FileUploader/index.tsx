@@ -43,6 +43,10 @@ const FileUploader: FC = () => {
       setError('No file selected.');
       return;
     }
+    if (file.type !== 'text/plain') {
+      setError('Invalid file type. Please upload a text file.');
+      return;
+    }
     const reader = new FileReader();
     reader.onload = (e: ProgressEvent<FileReader>) => {
       const content = e.target?.result?.toString();
@@ -65,12 +69,40 @@ const FileUploader: FC = () => {
 
   const processContent = (content: string) => {
     setError(null);
-    const lines = content.split('\n');
+    const lines = content.trim().split('\n');
     if (lines.length < 4) {
       setError('Content format is invalid.');
       return;
     }
-    const [_, instruction1, instruction2, message] = lines;
+    const [header, instruction1, instruction2, message] = lines;
+    const [M1, M2, N] = header.split(' ').map(Number);
+
+    if (
+      isNaN(M1) ||
+      isNaN(M2) ||
+      isNaN(N) ||
+      M1 <= 1 ||
+      M1 > 50 ||
+      M2 <= 1 ||
+      M2 > 50 ||
+      N < 3 ||
+      N > 5000
+    ) {
+      setError('Header format is invalid.');
+      return;
+    }
+
+    if (
+      instruction1.length !== M1 ||
+      instruction2.length !== M2 ||
+      message.length !== N
+    ) {
+      setError(
+        'Mismatch between header and actual instruction/message lengths.'
+      );
+      return;
+    }
+
     const result = checkInstructions(instruction1, instruction2, message);
     const blob = new Blob([result], { type: 'text/plain;charset=utf-8' });
     saveAs(blob, 'output.txt');
@@ -121,7 +153,7 @@ const FileUploader: FC = () => {
     e.preventDefault();
     setText('');
     setFile(null);
-    setChecked(false)
+    setChecked(false);
     setError(null);
   }
 
@@ -161,15 +193,9 @@ const FileUploader: FC = () => {
                   onChange={handleTextChange}
                   placeholder="Type your message here."
                   id="message"
-                  
                 />
               ) : (
-                <Input
-                  id="file"
-                  type="file"
-                  onChange={handleFileChange}
-                  
-                />
+                <Input id="file" type="file" onChange={handleFileChange} />
               )}
             </CardContent>
             <CardFooter className="flex justify-between">
