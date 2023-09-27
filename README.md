@@ -4,6 +4,25 @@
 
 This project implements a decryption system developed with React and TypeScript to help agents decode encrypted instructions embedded within messages. With a user-friendly interface and optimized code, this tool serves as a valuable resource for professionals in the field of security and cryptography.
 
+# Technologies Utilized
+
+The following technologies and libraries were employed in the development of this application:
+
+- **[ESLint](https://eslint.org/)**: A static code analysis tool for identifying problematic patterns found in JavaScript code.
+
+- **[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)**: This package provides Airbnb's .eslintrc as an extensible shared config, enforcing a strict and clean code standard.
+
+- **[Prettier](https://prettier.io/)**: An opinionated code formatter, ensuring that all outputted code conforms to a consistent style.
+
+- **[Vitest](https://github.com/vitest-dev/vitest)**: A modern, powerful, and extensible test runner, designed for Vite projects.
+
+- **[jsdom](https://github.com/jsdom/jsdom)**: A simulation of a web browser's environment allows us to test JavaScript code server-side, or in isolation from a browser.
+
+- **[@testing-library](https://testing-library.com/)**: A family of libraries that allows for easy and clean testing of UI components.
+
+- **[Shade UI Library](https://ui.shade.cn.com/)**: A comprehensive library of pre-designed components, aiding in swift and consistent UI
+
+
 ## Features
 
 - Decode encrypted instructions from given messages.
