@@ -20,7 +20,7 @@ The following technologies and libraries were employed in the development of thi
 
 - **[@testing-library](https://testing-library.com/)**: A family of libraries that allows for easy and clean testing of UI components.
 
-- **[Shade UI Library](https://ui.shade.cn.com/)**: A comprehensive library of pre-designed components, aiding in swift and consistent UI
+- **[Shadcn/ui Library](https://ui.shadcn.com/)**: Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source
 
 
 ## Demo
@@ -33,6 +33,40 @@ A live demo of the application can be found at [https://encrypted-instructions-p
 - Supports messages with repeated characters due to transmission errors.
 - User-friendly interface for easy decryption and instruction identification.
 
+## Program Input
+
+The input to the program is a text file with the following structure:
+
+- The input to the program is a text file consisting of four lines.
+- The first line is three integers M1, M2 and N. M1 and M2 is the number of characters in the two instructions and N is the number of characters in the message.
+- N will always be between 3 and 5000 inclusive.
+- M1 and M2 will always be between 2 and 50 inclusive.
+- The second line contains the first instruction.
+- The third line contains the second instruction.
+- The fourth line contains the message.
+- The possible characters in the message are [a-zA-Z0-9].
+
+Example input file content:
+
+```txt
+11 15 38
+CeseAlFuego
+CorranACubierto
+XXcaaamakkCCessseAAllFueeegooDLLKmmNNN
+```
+
+## Program Output
+
+The output of the program is a file containing two lines.
+- The first line contains a YES if the first instruction is hidden in the message or a NO otherwise. message or a NO otherwise.
+- The second line contains a YES if the first instruction is hidden in the message or a NO otherwise. message or a NO otherwise.
+
+Example output file content:
+```txt
+SI
+NO
+```
+
 ## Getting Started
 
 ### Prerequisites
@@ -44,8 +78,8 @@ A live demo of the application can be found at [https://encrypted-instructions-p
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/jcvb//Encrypted-Instructions.git
-cd encrypted-instructions-decoder
+git clone https://github.com/jcvb/Encrypted-Instructions.git
+cd Encrypted-Instructions
 ```
 
 # Available Scripts
