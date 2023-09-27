@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
-import FileReader from './components/FileReader';
+import FileReader from './components/FileUploader';
 function App() {
   return (
     <div>
