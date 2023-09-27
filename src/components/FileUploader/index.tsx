@@ -121,7 +121,8 @@ const FileUploader: FC = () => {
     e.preventDefault();
     setText('');
     setFile(null);
-    setChecked(false);
+    setChecked(false)
+    setError(null);
   }
 
   return (
