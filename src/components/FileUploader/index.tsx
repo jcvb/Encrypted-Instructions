@@ -195,7 +195,12 @@ const FileUploader: FC = () => {
                   id="message"
                 />
               ) : (
-                <Input id="file" type="file" onChange={handleFileChange} />
+                <Input
+                  id="file"
+                  type="file"
+                  onChange={handleFileChange}
+                  accept=".txt"
+                />
               )}
             </CardContent>
             <CardFooter className="flex justify-between">
